@@ -19,7 +19,7 @@ def new_project():
         for row in reader:
             length = length + 1
 
-    with open('projects.csv', 'w', newline='') as f:
+    with open('projects.csv', 'a', newline='') as f:
         writer = csv.writer(f)
         writer.writerow([length, name])
 
@@ -54,7 +54,7 @@ def record():
 
     time_convert(time_elapsed)
 
-    with open('time_log.csv', 'w', newline='') as f:
+    with open('time_log.csv', 'a', newline='') as f:
         writer = csv.writer(f)
         writer.writerow([project_id, start_time, end_time])
 
